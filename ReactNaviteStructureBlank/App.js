@@ -1,11 +1,25 @@
-import React from 'react'
+import React from 'react';
 
-import Navigation from './navigation/navigation'
+import Navigation from './navigation/navigation';
+import AuthNavigator from './src/navigations/AuthNavigator';
+import BottomTabNavigator from './src/navigations/BottomTabNavigator';
+import {NavigationContainer} from '@react-navigation/native';
 
 const App = () => {
-  return (
-   <Navigation />
-    )
-}
+  // isAuthenticated =
 
-export default App
+  return (
+    <>
+      <NavigationContainer>
+        {/* {isAuthenticated ? AuthNavigator : BottomTabNavigator} */}
+        <AuthNavigator />
+      </NavigationContainer>
+
+      {/* OR */}
+
+      {/* <Navigation />  */}
+    </>
+  );
+};
+
+export default App;
